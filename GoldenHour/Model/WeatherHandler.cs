@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace GoldenHour.Model
 {
-    public class Location
+    public class WeatherHandler
     {
         [JsonProperty("results")]
         public Results Results { get; set; }
 
         [JsonProperty("status")]
         public string Status { get; set; }
+        
     }
 
     public class Results

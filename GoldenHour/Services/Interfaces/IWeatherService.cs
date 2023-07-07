@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace GoldenHour.Services.Interfaces
 {
-    public interface ILocationService
+    public interface IWeatherService
     {
-        Task<LocationHandler> GetLocationAsync();
-        Task<LocationHandler> GetCachedLocationAsync();
+        public Task<WeatherHandler> GetSunsetSunrise(double longitude, double latitude);
     }
 }

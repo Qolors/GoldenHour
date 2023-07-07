@@ -4,5 +4,18 @@
 			 xmlns:vm="clr-namespace:GoldenHour.ViewModels"
 			 x:Class="GoldenHour.Views.HomePage"
 			 x:DataType="vm:HomeViewModel">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Image Source="sunrise_logo.png" WidthRequest="100" HeightRequest="100"/>
+            <Label FontFamily="OpenSans-Regular" Text="{Binding SunRiseTime}" FontSize="Large" VerticalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Image Source="sunset_logo.png" WidthRequest="100" HeightRequest="100"/>
+            <Label FontFamily="OpenSansRegular" Text="{Binding SunSetTime}" FontSize="Large" VerticalOptions="Center"/>
+        </StackLayout>
+
+    </StackLayout>
 
 </ContentPage>

@@ -7,4 +7,16 @@ public partial class HomePage : ContentPage
 		InitializeComponent();
 		BindingContext = viewModel;
 	}
+
+    protected override async void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+		var homeViewModel = BindingContext as HomeViewModel;
+
+		if (homeViewModel != null)
+		{
+			await homeViewModel.LoadUpData();
+		}
+
+        base.OnNavigatedTo(args);
+    }
 }

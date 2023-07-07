@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoldenHour.Model
 {
-    public class Weather
+    public class NotificationHandler
     {
     }
 }

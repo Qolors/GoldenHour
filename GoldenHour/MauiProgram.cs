@@ -1,4 +1,7 @@
-﻿namespace GoldenHour;
+﻿using GoldenHour.Services;
+using GoldenHour.Services.Interfaces;
+
+namespace GoldenHour;
 
 public static class MauiProgram
 {
@@ -17,7 +20,11 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddSingleton<HomeViewModel>();
+        builder.Services.AddSingleton<IWeatherService, WeatherService>();
+
+        builder.Services.AddSingleton<ILocationService, LocationService>();
+
+        builder.Services.AddSingleton<HomeViewModel>();
 
 		builder.Services.AddSingleton<HomePage>();
 
